@@ -28,4 +28,6 @@ while True:
         user_name = vk_bot.method('users.get',{'users_ids': user_id})
         write_msg(user_id,'привет'+ (user_name[0]['first_name'])) #сообщение пользователю
         print(str(user_name[0]['first_name'])) + ' ' +
-              str(user_name[0]['last_name']) + ' написал(в'
+              str(user_name[0]['last_name']) + ' написал(а) боту - ' + str(update[0][6])
+# Меняем ts для следующего запроса 
+ts = long_poll['ts']
